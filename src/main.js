@@ -5,7 +5,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-
 var config = {
   apiKey: "AIzaSyCFY0XpwjxuDe1FahpfgQbGAP5ZpZf__ec",
   authDomain: "reception-54074.firebaseapp.com",
@@ -28,25 +27,4 @@ new Vue({
   template: '<App/>'
 })
 
-'use strict';
-
-import axios from 'axios';
-
-let vm = new Vue( {
-  el: '#qiita-posts',
-  data: {
-    posts: void(0),
-  },
-  methods: {
-    request: () => {
-      axios.get( 'https://script.google.com/macros/s/AKfycbzFI0H7LhJCl0wWBk7q8qG5APAS1WvjUdOQCfRkjpeNG9Nilg/exec' )
-        .then( ( res ) => {
-          vm.posts = res.data;
-        } )
-        .catch( ( res ) => {
-          console.error( res );
-        } );
-    }
-  },
-} );
 
