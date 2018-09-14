@@ -3,7 +3,7 @@
     <header class="header">
     </header>
     <section class="sec_main">
-      <h1 class="h1">ご来社いただき、ありがとうございます。</br>御用の会社名をタッチしてください。</h1>
+      <h1 class="h1">ご訪問ありがとうございます、ありがとうございます。</br>御用の会社名をタッチしてください。</h1>
       <div class="main_logo">
         <button class="button button-arc ripple">
           <img src="/static/img/arc.png">

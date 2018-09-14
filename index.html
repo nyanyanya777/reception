@@ -3,10 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="static/css/reset.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
     <title>reception</title>
   </head>
-  <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCFY0XpwjxuDe1FahpfgQbGAP5ZpZf__ec",
+      authDomain: "reception-54074.firebaseapp.com",
+      databaseURL: "https://reception-54074.firebaseio.com",
+      projectId: "reception-54074",
+      storageBucket: "reception-54074.appspot.com",
+      messagingSenderId: "461189438755"
+    };
+    firebase.initializeApp(config);
+  </script>
 </html>
