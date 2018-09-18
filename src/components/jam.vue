@@ -24,7 +24,7 @@
       <div class="sec_staffSelect--staffArea">
         <div class="sec_staffSelect--staffInfo">
           <div class="sec_staffSelect--scrollArea">
-          <ul class="sec_staffSelect--staffUi" id="list">
+          <ul id="sec_staffSelect--staffUi" >
               <!--<li v-for="item in items">-->
                 <!--<label>-->
                   <!--<input type="checkbox" v-model="item.done" />-->
@@ -43,35 +43,55 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  // Ajax通信ライブラリ
-  import axios from 'axios';
-
-  window.onload = function() {
-    var vm = new Vue({
-      el: '#list',
-      data: {
-        names: []
-      },
-      template: '<ul id="example-1">\n' +
-        '  <li v-for="name in names">\n' +
-        '    {{ response }}\n' +
-        '  </li>\n' +
-        '</ul>',
-      methods: {
-        getName() {
-           axios.get('https://script.google.com/macros/s/AKfycbwQKDeTB6tb-RZizRuF1WX1sR2n0Px-mA337sTyf_n0uCxDSw/exec')
-          // thenで成功した場合の処理をかける
-            .then(response => {
-              Vue.set(this, name, res.data);
-              response.data;
-              console.log(response);
-            })
-        }
+import Vue from 'vue'
+// Ajax通信ライブラリ
+import axios from 'axios'
+// window.onload = function() {
+//   var vm = new Vue({
+//     el: '#list',
+//     data: {
+//       names: []
+//     },
+//     template: '<ul id="example-1">\n' +
+//       '  <li v-for="name in names">\n' +
+//       '    {{ response }}\n' +
+//       '  </li>\n' +
+//       '</ul>',
+//     methods: {
+//       getName() {
+//          axios.get('https://script.google.com/macros/s/AKfycbwQKDeTB6tb-RZizRuF1WX1sR2n0Px-mA337sTyf_n0uCxDSw/exec')
+//         // thenで成功した場合の処理をかける
+//           .then(response => {
+//             response.data;
+//             console.log(response);
+//           })
+//       }
+//     }
+//   })
+// };
+window.onload = function () {
+  new Vue({
+    el: '#sec_staffSelect--staffUi',
+    data () {
+      return {
+        data: []
       }
-    })
-  };
+    },
+    template: '<ul id="example-1">\n' +
+      '  <li>\n' +
+      '    {{ data }}\n' +
+      '  </li>\n' +
+      '</ul>',
+    created () {
+      const self = this
+      axios.get('https://script.google.com/macros/s/AKfycbwQKDeTB6tb-RZizRuF1WX1sR2n0Px-mA337sTyf_n0uCxDSw/exec')
+        .then(response => {
+          console.log(response.data) // response body.body
+          self.data = response.data
+        }).catch(err => {
+          console.log('err:', err)
+        })
+    }
+  })
+}
 </script>
-
-<style>
-</style>
