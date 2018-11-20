@@ -84,7 +84,7 @@ window.onload = function () {
       let i = 0
       return axios
         .get(
-          'https://script.google.com/macros/s/AKfycbwQKDeTB6tb-RZizRuF1WX1sR2n0Px-mA337sTyf_n0uCxDSw/exec'
+          process.env.Call_name
         )
         .then(response => {
           for (let i = 0, len = response.data.length; i < len; ++i) {
