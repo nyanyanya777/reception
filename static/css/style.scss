@@ -98,6 +98,16 @@ input[type=checkbox] {
   }
 }
 
+.header {
+  height: 18rem;
+}
+
+.done {
+  color: red;
+}
+
+.done { text-decoration: line-through; }
+
 /*
 main
 */
@@ -468,6 +478,10 @@ input[type="text"]:focus {
     opacity: 0.6;
     transition: 0.8s;
   }
+}
+
+.selected {
+  color: red;
 }
 
 .back {

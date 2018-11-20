@@ -78,6 +78,15 @@ input[type=checkbox] {
     opacity: 0.6;
     transition: 0.8s; }
 
+.header {
+  height: 18rem; }
+
+.done {
+  color: red; }
+
+.done {
+  text-decoration: line-through; }
+
 /*
 main
 */
@@ -385,6 +394,9 @@ input[type="text"]:focus {
   .sec_staffSelect--btnArea .reception_btn:hover {
     opacity: 0.6;
     transition: 0.8s; }
+
+.selected {
+  color: red; }
 
 .back {
   font-size: 2rem;

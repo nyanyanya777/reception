@@ -6,18 +6,18 @@ import App from './App'
 import router from './router'
 
 var config = {
-  apiKey: "AIzaSyCFY0XpwjxuDe1FahpfgQbGAP5ZpZf__ec",
-  authDomain: "reception-54074.firebaseapp.com",
-  databaseURL: "https://reception-54074.firebaseio.com",
-  projectId: "reception-54074",
-  storageBucket: "reception-54074.appspot.com",
-  messagingSenderId: "461189438755"
-};
-firebase.initializeApp(config);
+  apiKey: 'AIzaSyCFY0XpwjxuDe1FahpfgQbGAP5ZpZf__ec',
+  authDomain: 'reception-54074.firebaseapp.com',
+  databaseURL: 'https://reception-54074.firebaseio.com',
+  projectId: 'reception-54074',
+  storageBucket: 'reception-54074.appspot.com',
+  messagingSenderId: '461189438755'
+}
+firebase.initializeApp(config)
 
 Vue.config.productionTip = false
 
-window.Vue = Vue;
+window.Vue = Vue
 
 /* eslint-disable no-new */
 new Vue({
@@ -26,5 +26,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
-
