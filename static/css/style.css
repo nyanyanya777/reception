@@ -1,0 +1,513 @@
+@charset "UTF-8";
+/* chromeの画像ボケ回避 */
+img {
+  -webkit-backface-visibility: hidden; }
+
+/*==========================================================================================
+
+	// 基本
+
+==========================================================================================*/
+html {
+  height: 100%;
+  font-size: 62.5%;
+  margin-top: -5%; }
+
+body {
+  height: 100%;
+  font-size: 62.5%;
+  margin-top: -5%;
+  font-family: 'Hiragino Kaku Gothic Pro',sans-serif;
+  line-height: 1.4;
+  color: #333;
+  word-wrap: break-word; }
+
+a {
+  color: #777;
+  text-decoration: none; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  transition: 0.8s; }
+  img:hover {
+    opacity: 0.5; }
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+*:focus {
+  outline: none; }
+
+li {
+  list-style: none; }
+
+input[type=checkbox] {
+  display: none;
+  /* checkboxを非表示にする */ }
+
+/*
+色の設定
+*/
+.sec_top .h2 {
+  text-align: center;
+  font-size: 8rem;
+  color: #f0f0f0; }
+.sec_top .h4 {
+  font-size: 4.5rem;
+  text-align: center;
+  color: #262626; }
+.sec_top .reception_btn {
+  padding: 20px;
+  background-color: #66ccff;
+  border-color: #66ccff;
+  color: #ffffff;
+  font-size: 2.7rem;
+  border-radius: 10px;
+  border-width: medium;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center; }
+  .sec_top .reception_btn:hover {
+    opacity: 0.6;
+    transition: 0.8s; }
+
+.header {
+  height: 18rem; }
+
+.done {
+  color: red; }
+
+.done {
+  text-decoration: line-through; }
+
+/*
+main
+*/
+input[type="text"]:focus {
+  outline: 0;
+  border-color: orange; }
+
+.h2 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 3%;
+  font-size: 4rem;
+  padding-bottom: 20px;
+  color: #060D1A; }
+  .h2::after {
+    content: " ";
+    width: 75%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    border-bottom: 1px solid #afafaf; }
+
+.h2long::after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-bottom: 1px solid #afafaf; }
+
+.welcome {
+  font-family: 'Gaegu', cursive; }
+
+.sec_main {
+  width: 100%;
+  height: auto;
+  background-color: #EFEFEF; }
+  .sec_main .h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4%;
+    margin-top: 17%;
+    font-weight: 800; }
+  .sec_main .main_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 10%; }
+    .sec_main .main_logo .main-boder {
+      border: solid 1px #333333;
+      position: absolute;
+      height: 80%; }
+    .sec_main .main_logo .button-arc {
+      right: 5%; }
+    .sec_main .main_logo .button-jam {
+      left: 5%; }
+    .sec_main .main_logo .button {
+      position: relative;
+      z-index: 1;
+      border-color: #F4F5F7;
+      background-color: #F4F5F7;
+      border-radius: 10px; }
+      .sec_main .main_logo .button .image_holder {
+        width: 400px;
+        height: 250px; }
+        .sec_main .main_logo .button .image_holder .arc_img {
+          width: 260px;
+          display: block;
+          margin: 0 auto; }
+        .sec_main .main_logo .button .image_holder .jam_img {
+          width: 450px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto; }
+      .sec_main .main_logo .button .company_name {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0;
+        margin-top: 5%;
+        font-size: 2.5rem;
+        color: #060D1A;
+        opacity: 0.8; }
+    .sec_main .main_logo .main-boder {
+      position: absolute;
+      height: 53%;
+      border: #e2e2e2 solid 1px;
+      z-index: 3; }
+
+.sec_success {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  display: none; }
+  .sec_success .sec_success--modify {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #3366CC;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.6; }
+  .sec_success .bell {
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 5rem;
+    font-weight: bold;
+    color: #3366CC;
+    animation-name: swing;
+    animation-duration: 2s;
+    animation-delay: .45s; }
+
+.sec_error {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: none; }
+  .sec_error .sec_error--modify {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #F71E35;
+    text-align: left;
+    display: inline-block;
+    line-height: 1.8; }
+
+.sec_choice .choice_btnArea {
+  display: flex;
+  justify-content: center; }
+  .sec_choice .choice_btnArea .choice_element--btn {
+    padding: 20px;
+    background-color: #ffffff;
+    border-color: #66ccff;
+    color: #1EB9B5;
+    font-size: 2.7rem;
+    border-radius: 10px;
+    border-width: medium; }
+    .sec_choice .choice_btnArea .choice_element--btn:hover {
+      background-color: #66ccff;
+      color: #ffffff;
+      transition: 0.8s; }
+  .sec_choice .choice_btnArea .choice_element--delBtn {
+    margin-right: 20px; }
+
+.sec_staffSelect--delArea {
+  display: flex;
+  flex-direction: row;
+  padding-right: 14%;
+  padding-left: 11%; }
+  .sec_staffSelect--delArea .sec_staffSelect--staffUl {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding-top: 1%;
+    padding-bottom: 1%; }
+    .sec_staffSelect--delArea .sec_staffSelect--staffUl .sec_staffSelect--staffli {
+      width: 33.5%; }
+      .sec_staffSelect--delArea .sec_staffSelect--staffUl .sec_staffSelect--staffli::after {
+        content: "";
+        display: block;
+        width: 29%; }
+  .sec_staffSelect--delArea .sec_staffSelect--staffLabel {
+    display: block;
+    padding-top: 1.3rem;
+    position: relative;
+    width: 90%;
+    padding: 1%;
+    font-size: 2.3rem;
+    color: #060D1A; }
+  .sec_staffSelect--delArea .sec_staffSelect--staffLabelHover {
+    background: linear-gradient(transparent 60%, #66ccff 60%); }
+  .sec_staffSelect--delArea .sec_staffSelect--staffLabel--chked {
+    background-color: #66ccff; }
+  .sec_staffSelect--delArea label::before, .sec_staffSelect--delArea label::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 17px;
+    height: 17px;
+    margin-top: -10px; }
+  .sec_staffSelect--delArea label:before {
+    background: #fff;
+    border: 1px solid #000; }
+  .sec_staffSelect--delArea .sec_staffSelect--staffLabel input[type="checkbox"]:checked + label {
+    background: #31A9EE;
+    color: #ffffff; }
+  .sec_staffSelect--delArea .sec_staffSelect--staffName {
+    font-size: 3rem;
+    display: block;
+    font-weight: 600;
+    text-align: left; }
+
+.sec_staffSelect--loadingArea {
+  display: block;
+  position: relative; }
+  .sec_staffSelect--loadingArea .sec_staffSelect--loadingImg {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+
+.sec_staffSelect {
+  max-width: 1080px;
+  margin: 0 auto; }
+  .sec_staffSelect .sec_staffSelect--staffArea {
+    display: flex;
+    flex-direction: row;
+    padding-right: 14%;
+    padding-left: 11%;
+    position: relative; }
+    .sec_staffSelect .sec_staffSelect--staffArea::after {
+      content: "選択を取り消すときは、名前を再度タッチしてください。";
+      position: absolute;
+      top: 100%;
+      padding-left: 4%;
+      padding-top: 1%;
+      font-size: 1.5rem; }
+    .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo {
+      margin-top: 2%;
+      height: 240px;
+      overflow: scroll;
+      position: relative; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--scrollArea {
+        position: absolute;
+        top: 74%;
+        left: 93%;
+        display: none; }
+        .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--scrollArea .sec_staffSelect--scrollImg {
+          height: 40px; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffUi {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #fff; }
+        .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffUi .sec_staffSelect--staffli {
+          width: 32.1%;
+          margin-bottom: 3%; }
+          .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffUi .sec_staffSelect--staffli::after {
+            content: "";
+            display: block;
+            width: 29%; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffLabel {
+        display: block;
+        padding-top: 1.3rem;
+        position: relative;
+        margin-bottom: 3%;
+        width: 90%;
+        padding: 1%;
+        font-size: 2.3rem;
+        color: #060D1A; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffLabelHover {
+        background: linear-gradient(transparent 60%, #66ccff 60%); }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffLabel--chked {
+        background-color: #66ccff; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo label::before, .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo label::after {
+        content: '';
+        display: none;
+        position: absolute;
+        top: 50%;
+        width: 17px;
+        height: 17px;
+        margin-top: -10px; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo label:before {
+        background: #fff;
+        border: 1px solid #000; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffLabel input[type="checkbox"]:checked + label {
+        background: #31A9EE;
+        color: #ffffff; }
+      .sec_staffSelect .sec_staffSelect--staffArea .sec_staffSelect--staffInfo .sec_staffSelect--staffName {
+        font-size: 3rem;
+        display: block;
+        font-weight: 600;
+        text-align: left; }
+
+.sec_staffSelect--btnArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3%; }
+  .sec_staffSelect--btnArea .reception_btn {
+    display: none; }
+  .sec_staffSelect--btnArea .show.reception_btn {
+    display: block;
+    background-color: #66ccff;
+    border-color: #66ccff;
+    color: #ffffff;
+    font-size: 2.7rem;
+    color: #ffffff;
+    font-size: 2.7rem;
+    width: 50%;
+    margin-top: 5%;
+    position: fixed;
+    animation: btn_show 0.8s linear 0s; }
+  .sec_staffSelect--btnArea .reception_btn:hover {
+    opacity: 0.6;
+    transition: 0.8s; }
+
+.selected {
+  color: red; }
+
+.back {
+  font-size: 2rem;
+  color: #66ccff;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  white-space: nowrap; }
+  .back::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f104";
+    font-weight: bold;
+    padding-right: 10%; }
+
+.circle_manage {
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.circle_manage_finish {
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+  position: absolute;
+  top: 160%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.circle_active {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3366CC; }
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3366CC;
+  opacity: 0.6; }
+
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 37%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 #000;
+  z-index: 4;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.75); }
+
+.page.page-enter {
+  -webkit-animation: flipin 1.5s ease-out; }
+.page.page-leave {
+  -webkit-animation: flipout 0.3s ease-out; }
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes flipout {
+  0% {
+    margin-left: 0%; }
+  100% {
+    margin-left: -100%; } }
+@-webkit-keyframes swing {
+  100% {
+    -webkit-transform-origin: bottom center; }
+  10% {
+    -webkit-transform: rotate(-15deg); }
+  20% {
+    -webkit-transform: rotate(10deg); }
+  30% {
+    -webkit-transform: rotate(-5deg); }
+  40% {
+    -webkit-transform: rotate(5deg); }
+  50% {
+    -webkit-transform: rotate(-3deg); }
+  60% {
+    -webkit-transform: rotate(2deg); }
+  70% {
+    -webkit-transform: rotate(-2deg); }
+  80% {
+    -webkit-transform: rotate(1deg); }
+  90% {
+    -webkit-transform: rotate(-1deg); }
+  100% {
+    -webkit-transform: rotate(0deg); } }
+@-webkit-keyframes btn_show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
