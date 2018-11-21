@@ -307,6 +307,7 @@ input[type="text"]:focus {
       }
     }
   }
+
   .sec_staffSelect--staffLabel {
     display: block;
     padding-top: 1.3rem;
@@ -458,10 +459,7 @@ input[type="text"]:focus {
   flex-direction: row;
   justify-content: center;
   margin-top: 3%;
-  .reception_btn {
-    display: none;
-  }
-  .show.reception_btn {
+ .reception_btn {
     display: block;
     background-color: #66ccff;
     border-color: #66ccff;
@@ -473,6 +471,9 @@ input[type="text"]:focus {
     margin-top: 5%;
     position: fixed;
     animation: btn_show 0.8s linear 0s;
+  }
+  .active {
+    color: red;
   }
   .reception_btn:hover {
     opacity: 0.6;

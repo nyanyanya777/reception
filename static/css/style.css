@@ -378,8 +378,6 @@ input[type="text"]:focus {
   justify-content: center;
   margin-top: 3%; }
   .sec_staffSelect--btnArea .reception_btn {
-    display: none; }
-  .sec_staffSelect--btnArea .show.reception_btn {
     display: block;
     background-color: #66ccff;
     border-color: #66ccff;
@@ -391,6 +389,8 @@ input[type="text"]:focus {
     margin-top: 5%;
     position: fixed;
     animation: btn_show 0.8s linear 0s; }
+  .sec_staffSelect--btnArea .active {
+    color: red; }
   .sec_staffSelect--btnArea .reception_btn:hover {
     opacity: 0.6;
     transition: 0.8s; }

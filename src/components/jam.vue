@@ -67,7 +67,7 @@ window.onload = function () {
                 '<button class="reception_btn">' +
                     '<i class="fas fa-bell bell"></i>' +
                         '<br>' +
-                    '<p class="sec_staffSelect--btnAre--text">呼び出す</p>' +
+                    '<p class="reception_btn" v-bind:class="{ active: checkedNames.length > 0 }" >呼び出す</p>' +
                 '</button>' +
             '</div>' +
             '<div class="circle_manage">' +
@@ -84,7 +84,7 @@ window.onload = function () {
       let i = 0
       return axios
         .get(
-          process.env.Call_name
+          'https://script.google.com/macros/s/AKfycbwQKDeTB6tb-RZizRuF1WX1sR2n0Px-mA337sTyf_n0uCxDSw/exec'
         )
         .then(response => {
           for (let i = 0, len = response.data.length; i < len; ++i) {
